@@ -1,772 +1,768 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <meta name="description" content="Semantic Reworks is a premium web development and technology automation studio based in Kolkata. We build high-performance websites, dynamic SaaS applications, and industrial IoT data ecosystems." />
-  <meta name="keywords" content="web development Kolkata, IoT integration, software development India, premium web design agency, custom dashboards" />
-  <meta name="author" content="Semantic Reworks" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Sales Playbook — Semantic Reworks</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070f;--surface:#0e0e1a;--card:#121220;--card2:#15152a;
+  --border:#1c1c32;--border2:#222238;
+  --accent:#6c5ce7;--a2:#00cec9;--a3:#fdcb6e;--a4:#fd79a8;--a5:#55efc4;
+  --text:#ededf8;--muted:#5858a0;--muted2:#8888c0;
+}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;padding-bottom:80px}
 
-  <!-- Open Graph / Facebook / LinkedIn / WhatsApp Preview Cards -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://semanticreworks.com/">
-  <meta property="og:title" content="Semantic Reworks — Premium Web & Automation Studio">
-  <meta property="og:description" content="High-performance websites, custom UI identities, and hardware-to-cloud IoT automation ecosystems built for business scaling.">
-  <meta property="og:image" content="https://semanticreworks.com/assets/og-preview.png">
-  
-  <title>Semantic Reworks — Driving IoT Digitization & Premium Web Development</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    :root {
-      --bg: #030509; 
-      --surface: #0a0f18; 
-      --card: rgba(255, 255, 255, 0.02);
-      --border: rgba(255, 255, 255, 0.06);
-      --border-hover: rgba(255, 255, 255, 0.15);
-      --accent: #00f0c8;
-      --accent-glow: rgba(0, 240, 200, 0.15);
-      --gradient: linear-gradient(135deg, #00f0c8 0%, #2e9cff 100%);
-      --text: #ffffff;
-      --muted: #8b99ae;
-      
-      --fd: 'Plus Jakarta Sans', sans-serif; 
-      --fb: 'Inter', sans-serif;             
-      --fm: 'Space Mono', monospace;         
+/* NAV */
+.nav-wrap{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;padding:0 16px}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-tab{flex-shrink:0;padding:14px 16px;font-size:11.5px;font-weight:600;letter-spacing:.4px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;font-family:'Inter',sans-serif;background:none;border-top:none;border-left:none;border-right:none}
+.nav-tab:hover{color:var(--text)}
+.nav-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
 
-      /* Professional Performance Easing Curve */
-      --cb: cubic-bezier(0.16, 1, 0.3, 1);
-    }
+/* HERO */
+.hero{background:linear-gradient(150deg,#0a0918 0%,#110d28 55%,#091520 100%);padding:44px 20px 36px;text-align:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 55% at 50% -10%,rgba(108,92,231,.18),transparent)}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;position:relative}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,4.5vw,38px);font-weight:800;line-height:1.12;position:relative}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{margin-top:10px;font-size:13.5px;color:var(--muted2);max-width:480px;margin-inline:auto;position:relative}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px;position:relative}
+.pill{padding:5px 13px;border-radius:99px;font-size:10.5px;font-weight:600;border:1px solid}
 
-    html { scroll-behavior: smooth; }
-    
-    body { 
-      background: var(--bg); 
-      color: var(--text); 
-      font-family: var(--fb); 
-      font-weight: 300; 
-      line-height: 1.7; 
-      overflow-x: hidden; 
-    }
-    
-    ::selection { background: var(--accent); color: #000; }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+/* PAGES */
+.page{display:none;max-width:960px;margin:0 auto;padding:28px 18px}
+.page.active{display:block}
 
-    body::before {
-      content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
-    }
-    
-    nav, main, footer { position: relative; z-index: 1; }
+/* SECTION LABEL */
+.slabel{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 
-    /* NAV */
-    nav { 
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100; 
-      display: flex; align-items: center; justify-content: space-between; 
-      padding: 1.5rem 5%; border-bottom: 1px solid transparent; 
-      transition: all 0.6s var(--cb); 
-    }
-    nav.scrolled { 
-      background: rgba(3, 5, 9, 0.7); 
-      backdrop-filter: blur(20px); 
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border); 
-      padding: 1rem 5%;
-    }
-    .nav-logo { font-family: var(--fd); font-weight: 800; font-size: 1.2rem; letter-spacing: -0.03em; color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 0.2rem;}
-    .nav-logo span { color: var(--accent); font-size: 1.5rem; line-height: 0;}
-    .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
-    .nav-links a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.4s var(--cb); font-weight: 500; letter-spacing: -0.01em; position: relative; padding: 0.2rem 0; }
-    
-    /* Interactive Nav Underlines */
-    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform 0.4s var(--cb); }
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
-    
-    .btn-primary { 
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      background: var(--text); color: var(--bg); 
-      font-family: var(--fd); font-size: 0.85rem; font-weight: 600; 
-      padding: 0.7rem 1.6rem; border-radius: 50px; text-decoration: none; border: none; cursor: pointer; 
-      transition: all 0.4s var(--cb); letter-spacing: -0.01em; position: relative; overflow: hidden;
-    }
-    /* Technical Light Swipe Sweep Animation */
-    .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 40%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent); transform: skewX(-30deg); transition: none; }
-    .btn-primary:hover::before { left: 140%; transition: left 0.7s ease-in-out; }
-    .btn-primary:hover { background: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 25px var(--accent-glow); }
-    .btn-primary svg { width: 14px; height: 14px; transition: transform 0.4s var(--cb); }
-    .btn-primary:hover svg { transform: translateX(4px); }
-    .nav-cta { padding: 0.6rem 1.2rem; font-size: 0.8rem; }
+/* PHASE CARD */
+.phase-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:18px}
+.phase-head{padding:16px 20px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--border);background:var(--card2)}
+.phase-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.phase-num{font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:2px}
+.phase-title{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700}
+.phase-body{padding:20px}
 
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
-    .hamburger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; display: block; transition: 0.4s var(--cb); }
-    .mobile-menu { position: fixed; inset: 0; z-index: 99; background: rgba(3,5,9,0.98); backdrop-filter: blur(20px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; transform: translateY(-100%); transition: transform 0.6s var(--cb), opacity 0.6s var(--cb); opacity: 0; }
-    .mobile-menu.open { transform: translateY(0); opacity: 1; }
-    .mobile-menu a { font-family: var(--fd); font-size: 2rem; font-weight: 700; color: var(--text); text-decoration: none; transition: 0.3s; }
-    .mobile-menu a:hover { color: var(--accent); }
-    .mobile-close { position: absolute; top: 1.5rem; right: 5%; font-size: 2.5rem; color: var(--muted); cursor: pointer; background: none; border: none; }
+/* SCRIPT BOX */
+.script-box{background:#090912;border:1px solid var(--border2);border-radius:10px;padding:16px 18px;position:relative;margin-bottom:12px}
+.role{font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.line{font-size:13px;line-height:1.75;color:#d0d0ec}
+.line strong{color:var(--accent);font-weight:600}
+.copy-btn{position:absolute;top:12px;right:12px;background:var(--border2);border:none;border-radius:6px;color:var(--muted2);font-size:10px;font-weight:600;padding:4px 9px;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:.5px;transition:all .2s}
+.copy-btn:hover{background:var(--accent);color:#fff}
+.copy-btn.copied{background:var(--a2);color:#041312}
 
-    /* HERO */
-    #home { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 12rem 5% 6rem; position: relative; overflow: hidden; }
-    .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 80px 80px; mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black 20%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 30%, black 20%, transparent 80%); }
-    
-    /* Cinematic Continuous Ambient Drift */
-    .hero-glow { position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 75vw; height: 75vh; pointer-events: none; background: radial-gradient(circle, rgba(0,240,200,0.07) 0%, rgba(46,156,255,0.04) 35%, transparent 75%); animation: ambientLiquid 16s infinite alternate ease-in-out; }
-    @keyframes ambientLiquid { 0% { transform: translateX(-50%) translate(-30px, -20px) scale(1); } 100% { transform: translateX(-50%) translate(30px, 30px) scale(1.08); } }
-    
-    .hero-content { position: relative; z-index: 1; max-width: 950px; }
-    
-    .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--fm); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 0.4rem 1.1rem; border-radius: 50px; margin-bottom: 2rem; opacity: 0; transform: translateY(20px); animation: structuralFadeUp 0.9s 0.2s var(--cb) forwards; backdrop-filter: blur(5px); }
-    .hero-badge span { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 12px var(--accent); }
-    
-    h1.hero-title { font-family: var(--fd); font-weight: 800; font-size: clamp(3rem, 7.5vw, 5.8rem); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 1.8rem; opacity: 0; transform: translateY(30px); animation: structuralFadeUp 0.9s 0.4s var(--cb) forwards; }
-    .text-gradient { background: var(--gradient); -webkit-background-clip: text; color: transparent; }
-    
-    .hero-sub { font-size: 1.15rem; color: var(--muted); max-width: 650px; line-height: 1.8; margin-bottom: 3.5rem; opacity: 0; transform: translateY(30px); animation: structuralFadeUp 0.9s 0.6s var(--cb) forwards; font-weight: 400; }
-    .hero-sub strong { color: var(--text); font-weight: 600; }
-    
-    .hero-actions { display: flex; align-items: center; gap: 1.5rem; opacity: 0; transform: translateY(30px); animation: structuralFadeUp 0.9s 0.8s var(--cb) forwards; }
-    
-    .hero-stats { display: flex; gap: 5rem; margin-top: 5.5rem; padding-top: 3rem; border-top: 1px solid var(--border); opacity: 0; transform: translateY(30px); animation: structuralFadeUp 0.9s 1s var(--cb) forwards; }
-    .stat-num { font-family: var(--fd); font-size: 2.4rem; font-weight: 800; color: var(--text); line-height: 1; letter-spacing: -0.02em; }
-    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; font-weight: 500; letter-spacing: 0.02em; }
+/* FORK GRID */
+.fork-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:540px){.fork-grid{grid-template-columns:1fr}}
+.fork-card{border-radius:11px;padding:15px 16px;border:1px solid}
+.fork-tag{font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.fork-line{font-size:12.5px;line-height:1.65;color:#cccce8}
+.fork-card.resist{background:rgba(253,203,110,.05);border-color:rgba(253,203,110,.2)}
+.fork-card.resist .fork-tag{color:var(--a3)}
+.fork-card.admit{background:rgba(85,239,196,.05);border-color:rgba(85,239,196,.2)}
+.fork-card.admit .fork-tag{color:var(--a5)}
 
-    .scroll-indicator { position: absolute; bottom: 2.5rem; left: 5%; display: flex; align-items: center; gap: 1rem; font-family: var(--fm); font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; opacity: 0; animation: structuralFadeUp 0.9s 1.2s var(--cb) forwards; }
-    .scroll-line { width: 1px; height: 40px; background: rgba(255,255,255,0.1); position: relative; overflow: hidden; }
-    .scroll-line::after { content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 15px; background: var(--accent); animation: scrollDown 2.2s infinite ease-in-out; }
+/* TIP */
+.tip{display:flex;gap:11px;background:rgba(108,92,231,.07);border:1px solid rgba(108,92,231,.2);border-radius:9px;padding:13px 15px;margin-top:12px}
+.tip-icon{font-size:15px;flex-shrink:0;margin-top:1px}
+.tip-text{font-size:12px;color:var(--muted2);line-height:1.6}
+.tip-text strong{color:var(--accent);font-weight:600}
 
-    /* SHARED STRUCTURAL REVEALS */
-    section { padding: 9rem 5%; }
-    .section-label { font-family: var(--fm); font-size: 0.7rem; letter-spacing: 0.18em; color: var(--accent); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; }
-    .section-label::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
-    .section-title { font-family: var(--fd); font-weight: 800; font-size: clamp(2.4rem, 5.2vw, 3.6rem); letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 1.5rem; }
-    .section-desc { font-size: 1.05rem; color: var(--muted); max-width: 620px; line-height: 1.8; font-weight: 400; }
-    .sec-header { margin-bottom: 4.5rem; }
+/* CHANNEL HEADER */
+.ch-header{display:flex;align-items:center;gap:11px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.ch-logo{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.ch-name{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700}
+.ch-sub{font-size:11px;color:var(--muted);margin-top:1px}
 
-    /* Advanced Base Animation Keyframes */
-    @keyframes structuralFadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes scrollDown { 0% { transform: translateY(-100%); opacity: 0; } 30% { opacity: 1; } 60% { transform: translateY(280%); opacity: 0; } 100% { transform: translateY(280%); opacity: 0; } }
-    
-    /* Hardware Accelerated Intersection Base CSS */
-    .reveal { opacity: 0; transform: translateY(35px); transition: opacity 1s var(--cb), transform 1s var(--cb); will-change: transform, opacity; }
-    .reveal.vis { opacity: 1; transform: translateY(0); }
+/* MSG VARIANT */
+.msg-variant{background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-bottom:11px}
+.mv-head{padding:11px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);background:var(--card2)}
+.mv-label{font-size:10.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.mv-tag{font-size:9.5px;font-weight:600;padding:3px 9px;border-radius:99px}
+.mv-body{padding:15px 16px}
+.msg-text{font-size:12.5px;line-height:1.78;color:#cccce6;white-space:pre-wrap}
 
-    /* Dynamic Stagger Loops For Children Arrays */
-    .reveal-grid > * { opacity: 0; transform: translateY(35px); transition: opacity 1s var(--cb), transform 1s var(--cb); will-change: transform, opacity; }
-    .reveal-grid.vis > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
-    .reveal-grid.vis > *:nth-child(2) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
-    .reveal-grid.vis > *:nth-child(3) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
-    .reveal-grid.vis > *:nth-child(4) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+/* PROMPT BOX */
+.prompt-section{background:var(--card2);border:1px solid var(--border2);border-radius:11px;padding:16px;margin-top:12px}
+.pt{font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.prompt-item{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.prompt-item:last-child{border-bottom:none}
+.p-tag{font-size:9.5px;font-weight:700;padding:2px 8px;border-radius:99px;flex-shrink:0;margin-top:2px;height:fit-content}
+.p-text{font-size:12px;color:var(--muted2);line-height:1.6}
+.p-text strong{color:var(--text);font-weight:500}
 
-    /* TIERS */
-    #tiers { background: var(--surface); position: relative; }
-    .tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    .tier { background: var(--bg); border: 1px solid var(--border); padding: 3.5rem 2.5rem; border-radius: 16px; position: relative; overflow: hidden; transition: transform 0.5s var(--cb), border-color 0.5s var(--cb), box-shadow 0.5s var(--cb); display: flex; flex-direction: column; }
-    .tier:hover { transform: translateY(-10px) scale(1.01); border-color: rgba(0, 240, 200, 0.25); box-shadow: 0 30px 60px rgba(0,0,0,0.65), 0 0 40px rgba(0, 240, 200, 0.02); }
-    .tier.featured { border-color: rgba(0, 240, 200, 0.2); background: linear-gradient(180deg, rgba(0,240,200,0.02) 0%, transparent 100%), var(--bg); }
-    .tier.featured:hover { border-color: var(--accent); box-shadow: 0 35px 70px rgba(0,240,200,0.08), 0 30px 60px rgba(0,0,0,0.7); }
-    .tier-badge { font-family: var(--fm); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); background: var(--surface); border: 1px solid var(--border); padding: 0.4rem 0.8rem; border-radius: 50px; display: inline-block; margin-bottom: 1.5rem; align-self: flex-start; }
-    .tier.featured .tier-badge { background: rgba(0,240,200,0.1); color: var(--accent); border-color: rgba(0,240,200,0.2); }
-    .tier-name { font-family: var(--fd); font-size: 1.8rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.5rem; color: var(--text); }
-    .tier-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); font-weight: 400; }
-    .tier-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; margin-bottom: 2.8rem; flex-grow: 1; }
-    .tier-list li { font-size: 0.9rem; color: var(--muted); display: flex; gap: 0.8rem; align-items: flex-start; font-weight: 400; transition: transform 0.3s var(--cb); }
-    .tier:hover .tier-list li { transform: translateX(2px); }
-    .tier-list li svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--accent); margin-top: 3px; }
-    .tier-list li strong { color: var(--text); font-weight: 600; }
-    .tier-btn { width: 100%; justify-content: center; background: transparent; color: var(--text); border: 1px solid var(--border-hover); font-size: 0.9rem; padding: 0.85rem; font-family: var(--fd); font-weight: 600; }
-    .tier.featured .tier-btn { background: var(--text); color: var(--bg); border: none; }
-    .tier.featured .tier-btn:hover { background: var(--accent); color: var(--bg); }
+/* OBJECTION TABLE */
+.obj-table{width:100%;border-collapse:collapse}
+.obj-table th{text-align:left;font-size:9.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);padding:8px 12px;border-bottom:1px solid var(--border)}
+.obj-table td{padding:12px;font-size:12.5px;line-height:1.6;border-bottom:1px solid rgba(255,255,255,.04);vertical-align:top}
+.obj-table td:first-child{color:var(--a3);font-weight:500;width:34%}
+.obj-table td:last-child{color:#cccce8}
 
-    /* CASE STUDIES / PORTFOLIO */
-    #portfolio { background: #060a12; }
-    .port-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
-    .port-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: transform 0.5s var(--cb), border-color 0.5s var(--cb), box-shadow 0.5s var(--cb); display: flex; flex-direction: column; }
-    .port-card:hover { transform: translateY(-10px) scale(1.01); border-color: rgba(46,156,255,0.3); box-shadow: 0 30px 60px rgba(0,0,0,0.7); }
-    .port-img-placeholder { width: 100%; height: 230px; background: linear-gradient(45deg, #091322, #040810); display: flex; align-items: center; justify-content: center; position: relative; border-bottom: 1px solid var(--border); font-family: var(--fm); font-size: 0.8rem; color: var(--accent); letter-spacing: 0.05em; overflow: hidden; }
-    
-    /* Interactive Scanning Glow on Media Placeholders */
-    .port-img-placeholder::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(0,240,200,0.04) 0%, transparent 60%); transition: transform 0.8s var(--cb); }
-    .port-card:hover .port-img-placeholder::before { transform: translate(15%, 15%); }
-    .port-img-placeholder::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(6,10,18,0.75)); }
-    
-    .port-info { padding: 2.2rem; display: flex; flex-direction: column; flex-grow: 1; }
-    .port-tag { font-family: var(--fm); font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.6rem; }
-    .port-title { font-family: var(--fd); font-size: 1.35rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--text); letter-spacing: -0.01em; }
-    .port-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.8rem; font-weight: 400; }
-    .port-meta { font-size: 0.8rem; font-family: var(--fm); color: var(--text); border-top: 1px solid var(--border); padding-top: 1.1rem; margin-top: auto; display: flex; justify-content: space-between; }
-    .port-meta span { color: var(--accent); }
-    
-    /* SERVICES */
-    #services { background: var(--bg); }
-    .srv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-    .srv { background: var(--surface); border: 1px solid var(--border); padding: 3.5rem; border-radius: 16px; transition: border-color 0.5s var(--cb), transform 0.5s var(--cb), box-shadow 0.5s var(--cb); }
-    .srv:hover { border-color: rgba(255,255,255,0.18); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-    .srv-icon { width: 52px; height: 52px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 2rem; transition: all 0.5s var(--cb); }
-    .srv:hover .srv-icon { background: var(--accent); color: #000; border-color: var(--accent); transform: scale(1.05) rotate(360deg); }
-    .srv-title { font-family: var(--fd); font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; color: var(--text); }
-    .srv-desc { font-size: 0.95rem; color: var(--muted); margin-bottom: 1.5rem; line-height: 1.7; font-weight: 400; }
+/* FOLLOW-UP TIMELINE */
+.fu-step{display:flex;gap:14px;padding-bottom:22px;position:relative}
+.fu-step::before{content:'';position:absolute;left:13px;top:30px;bottom:0;width:1px;background:var(--border)}
+.fu-step:last-child::before{display:none}
+.fu-dot{width:28px;height:28px;border-radius:50%;border:2px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;background:var(--card);position:relative;z-index:1}
+.fu-content{flex:1;padding-top:2px}
+.fu-day{font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.fu-action{font-size:13px;font-weight:600;margin-bottom:4px}
+.fu-note{font-size:11.5px;color:var(--muted2);line-height:1.55}
 
-    /* ABOUT */
-    #about { background: var(--surface); }
-    .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-    .belief-block { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
-    .belief { background: var(--bg); border: 1px solid var(--border); padding: 2.2rem; border-radius: 12px; transition: border-color 0.4s var(--cb), transform 0.4s var(--cb); }
-    .belief:hover { border-color: var(--accent); transform: translateY(-4px); }
-    .belief-n { font-family: var(--fm); font-size: 0.8rem; color: var(--accent); display: block; margin-bottom: 1rem; }
-    .belief-body strong { display: block; font-size: 1.1rem; color: var(--text); margin-bottom: 0.5rem; font-family: var(--fd); font-weight: 700; }
-    .belief-body p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; font-weight: 400; }
-
-    /* CONTACT & FORMS */
-    #contact { background: var(--bg); }
-    .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
-    .c-info { position: sticky; top: 150px; }
-    .c-detail-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2rem; }
-    .c-detail { display: flex; align-items: center; gap: 1.2rem; }
-    .c-detail-icon { width: 45px; height: 45px; background: var(--surface); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
-    .c-detail-val { font-size: 1rem; color: var(--text); font-weight: 500;}
-    .c-detail-lbl { font-size: 0.75rem; color: var(--muted); font-family: var(--fm); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;}
-
-    .c-form { background: var(--surface); border: 1px solid var(--border); padding: 3.5rem; border-radius: 16px; display: flex; flex-direction: column; gap: 1.6rem; transition: border-color 0.5s var(--cb); }
-    
-    /* Interactive Highlight When Client Selects Tier Plan */
-    .c-form.plan-pulse { border-color: var(--accent); animation: formFlash 1s var(--cb); }
-    @keyframes formFlash { 0%, 100% { box-shadow: none; } 50% { box-shadow: 0 0 30px rgba(0, 240, 200, 0.15); } }
-
-    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .f-group { display: flex; flex-direction: column; gap: 0.5rem; }
-    .f-group label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text); font-family: var(--fd); }
-    
-    .f-group input, .f-group select, .f-group textarea { 
-      background: rgba(255,255,255,0.015); 
-      border: 1px solid var(--border); 
-      border-radius: 8px; 
-      color: var(--text); 
-      font-family: var(--fb); 
-      font-size: 0.95rem; 
-      padding: 1.1rem 1.3rem; 
-      outline: none; 
-      transition: border-color 0.4s var(--cb), background-color 0.4s var(--cb), box-shadow 0.4s var(--cb); 
-      -webkit-appearance: none; 
-      font-weight: 400;
-    }
-    .f-group input::placeholder, .f-group textarea::placeholder { color: rgba(139,153,174,0.35); }
-    .f-group input:focus, .f-group select:focus, .f-group textarea:focus { 
-      background: rgba(255,255,255,0.035);
-      border-color: var(--accent); 
-      box-shadow: 0 0 0 4px rgba(0, 240, 200, 0.08); 
-    }
-    .f-group select option { background: var(--bg); }
-    .f-group textarea { resize: vertical; min-height: 130px; }
-    
-    /* FILE UPLOAD STYLING */
-    input[type="file"] { padding: 0.8rem; border: 1px dashed var(--border); cursor: pointer; color: var(--muted); }
-    input[type="file"]:hover { border-color: rgba(255,255,255,0.25); }
-    input[type="file"]::file-selector-button { background: var(--text); color: var(--bg); border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer; margin-right: 1rem; font-family: var(--fd); font-weight: 600; font-size: 0.8rem; transition: background-color 0.3s; }
-    input[type="file"]::file-selector-button:hover { background: var(--accent); }
-    .file-hint { font-size: 0.75rem; color: var(--muted); margin-top: 0.4rem; }
-    .file-error { display: none; color: #ff4c6a; font-size: 0.8rem; margin-top: 0.4rem; font-weight: 500; }
-    
-    .f-submit { margin-top: 1rem; width: 100%; justify-content: center; padding: 1.1rem; font-size: 1rem; }
-    
-    /* Form Messages */
-    .form-msg { display: none; border-radius: 8px; padding: 1.2rem; font-size: 0.95rem; font-weight: 500; text-align: center; margin-bottom: 1rem;}
-    .form-msg.show { display: block; }
-    .msg-success { background: rgba(0,240,200,0.1); border: 1px solid rgba(0,240,200,0.3); color: var(--accent); }
-    .msg-error { background: rgba(255,76,106,0.1); border: 1px solid rgba(255,76,106,0.3); color: #ff4c6a; }
-
-    /* FOOTER */
-    footer { background: #010204; border-top: 1px solid var(--border); padding: 5rem 5% 2rem; }
-    .foot-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-    .foot-brand h4 { font-family: var(--fd); font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; color: var(--text); }
-    .foot-brand h4 span { color: var(--accent); }
-    .foot-brand p { font-size: 0.95rem; color: var(--muted); line-height: 1.8; max-width: 350px; font-weight: 400; }
-    .foot-col h5 { font-size: 0.8rem; font-family: var(--fm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); margin-bottom: 1.5rem; }
-    .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-    .foot-col ul li a { font-size: 0.95rem; color: var(--muted); text-decoration: none; transition: color 0.3s; font-weight: 400; }
-    .foot-col ul li a:hover { color: var(--accent); }
-    .foot-bottom { border-top: 1px solid var(--border); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-    .foot-bottom p { font-size: 0.85rem; color: var(--muted); font-weight: 400; }
-
-    /* WhatsApp Floating Widget Widget */
-    .wa-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 65px; height: 65px; text-decoration: none; box-shadow: 0 10px 30px rgba(37,211,102,0.3); transition: transform 0.4s var(--cb), box-shadow 0.4s var(--cb); z-index: 100; }
-    .wa-float:hover { transform: translateY(-6px) scale(1.06); box-shadow: 0 18px 35px rgba(37,211,102,0.45); }
-    .wa-float svg { width: 35px; height: 35px; fill: white; }
-
-    /* Mobile Adaptations */
-    @media (max-width: 992px) {
-      .about-wrap, .contact-wrap { grid-template-columns: 1fr; gap: 4rem; }
-      .c-info { position: relative; top: 0; }
-    }
-    @media (max-width: 768px) {
-      nav { padding: 1rem 5%; }
-      nav.scrolled { padding: 1rem 5%; }
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      #home { padding: 8rem 5% 4rem; }
-      section { padding: 5rem 5%; }
-      .belief-block, .f-row { grid-template-columns: 1fr; }
-      .hero-stats { flex-wrap: wrap; gap: 2.5rem; }
-      .foot-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .c-form { padding: 2.5rem 1.5rem; }
-      .wa-float { bottom: 20px; right: 20px; width: 55px; height: 55px; } 
-      .wa-float svg { width: 30px; height: 30px; }
-    }
-  </style>
+.divider{height:1px;background:var(--border);margin:20px 0}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--surface)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+</style>
 </head>
 <body>
 
-<nav id="navbar">
-  <a href="#home" class="nav-logo">Semantic<span>.</span>Reworks</a>
-  <ul class="nav-links">
-    <li><a href="#tiers">Web Packages</a></li>
-    <li><a href="#portfolio">Featured Work</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">Our Story</a></li>
-  </ul>
-  <a href="#contact" class="btn-primary nav-cta">Start Project</a>
-  
-  <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" onclick="toggleMenu()" aria-label="Close">×</button>
-  <a href="#tiers" onclick="toggleMenu()">Web Packages</a>
-  <a href="#portfolio" onclick="toggleMenu()">Featured Work</a>
-  <a href="#services" onclick="toggleMenu()">Services</a>
-  <a href="#about" onclick="toggleMenu()">Company</a>
-  <a href="#contact" onclick="toggleMenu()" style="color:var(--accent)">Start Project →</a>
+<div class="hero">
+  <div class="eyebrow">Semantic Reworks · Website Service Playbook</div>
+  <h1>Turn Any Cold Message Into a<br><em>Website Client</em></h1>
+  <p>Cold call script, DM sequences & objection handlers — all focused on selling website services</p>
+  <div class="pills">
+    <span class="pill" style="background:rgba(108,92,231,.1);border-color:rgba(108,92,231,.3);color:#a89dfc">📞 Cold Call</span>
+    <span class="pill" style="background:rgba(10,102,194,.1);border-color:rgba(10,102,194,.3);color:#6ab4f5">💼 LinkedIn</span>
+    <span class="pill" style="background:rgba(225,48,108,.1);border-color:rgba(225,48,108,.3);color:#f472b6">📸 Instagram</span>
+    <span class="pill" style="background:rgba(24,119,242,.1);border-color:rgba(24,119,242,.3);color:#60a5fa">👥 Facebook</span>
+    <span class="pill" style="background:rgba(85,239,196,.1);border-color:rgba(85,239,196,.3);color:#55efc4">🔄 Follow-Ups</span>
+    <span class="pill" style="background:rgba(253,203,110,.1);border-color:rgba(253,203,110,.3);color:#fdcb6e">💬 Objections</span>
+    <span class="pill" style="background:rgba(253,121,168,.1);border-color:rgba(253,121,168,.3);color:#fd79a8">🤖 AI Prompts</span>
+  </div>
 </div>
 
-<main>
-<section id="home">
-  <div class="hero-grid"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-content">
-    <div class="hero-badge"><span></span> Based in Kolkata · Serving Globally</div>
-    <h1 class="hero-title">
-      Driving IoT Digitization &<br>
-      <span class="text-gradient">Premium Web builds.</span>
-    </h1>
-    <p class="hero-sub">
-      From sleek, high-conversion brand sites to complete **industrial edge-to-cloud systems**—we design and deploy bulletproof software architectures.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary" style="padding: 1rem 2rem; font-size: 1rem;">
-        Start Your Project
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
-    </div>
-    
-    <div class="hero-stats">
-      <div><div class="stat-num">100%</div><div class="stat-label">Tailored Implementations</div></div>
-      <div><div class="stat-num">Ultra</div><div class="stat-label">Low Latency Pipelines</div></div>
-      <div><div class="stat-num">24/7</div><div class="stat-label">Production Support</div></div>
-    </div>
+<div class="nav-wrap">
+  <div class="nav-inner">
+    <button class="nav-tab active" onclick="showPage('cold-call',this)">📞 Cold Call</button>
+    <button class="nav-tab" onclick="showPage('linkedin',this)">💼 LinkedIn</button>
+    <button class="nav-tab" onclick="showPage('instagram',this)">📸 Instagram</button>
+    <button class="nav-tab" onclick="showPage('facebook',this)">👥 Facebook</button>
+    <button class="nav-tab" onclick="showPage('followup',this)">🔄 Follow-Ups</button>
+    <button class="nav-tab" onclick="showPage('objections',this)">💬 Objections</button>
+    <button class="nav-tab" onclick="showPage('prompts',this)">🤖 AI Prompts</button>
   </div>
+</div>
 
-  <div class="scroll-indicator">
-    Scroll <div class="scroll-line"></div>
-  </div>
-</section>
+<!-- ══════════════════════════════
+     COLD CALL
+══════════════════════════════ -->
+<div class="page active" id="cold-call">
 
-<section id="tiers">
-  <div class="sec-header reveal">
-    <p class="section-label">Packages</p>
-    <h2 class="section-title">Web Solutions for<br><span class="text-gradient">Every Business Size</span></h2>
-    <p class="section-desc">Whether you're just starting out or scaling to a custom industrial framework—we have a web solution tailored to your goals, audience, and budget.</p>
-  </div>
-  
-  <!-- Configured with reveal-grid for high-end stagger entry -->
-  <div class="tier-grid reveal-grid">
-    <div class="tier">
-      <div class="tier-badge">Starter</div>
-      <div class="tier-name">Small Business</div>
-      <p class="tier-desc">Perfect for local businesses, freelancers, and startups needing a clean, professional online presence.</p>
-      <ul class="tier-list">
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>5-page Responsive Website</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Mobile-first design identity</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>WhatsApp communication link</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Basic Core Web SEO & Hosting</strong></span></li>
-      </ul>
-      <button class="btn-primary tier-btn" onclick="selectTier('Business Website (Small / Starter)')">Choose Starter</button>
-    </div>
-    
-    <div class="tier featured">
-      <div class="tier-badge">Most Popular</div>
-      <div class="tier-name">Mid-Range Business</div>
-      <p class="tier-desc">Ideal for growing businesses that need dynamic content generation, automated lead funnels, and integrations.</p>
-      <ul class="tier-list">
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Multi-page CMS Architecture</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Bespoke Custom UI/UX Identity</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Lead capture CRM integration</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Advanced On-page structural SEO</strong></span></li>
-      </ul>
-      <button class="btn-primary tier-btn" onclick="selectTier('Growth Website with CMS & SEO')">Choose Mid-Range</button>
-    </div>
-    
-    <div class="tier">
-      <div class="tier-badge">Enterprise</div>
-      <div class="tier-name">High-Range / IoT</div>
-      <p class="tier-desc">For established companies needing custom web applications, real-time automation, and hardware ecosystems.</p>
-      <ul class="tier-list">
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Custom Web App & Cloud SaaS</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Real-time Telemetry Dashboards</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>AI Pipeline & API Integrations</strong></span></li>
-        <li><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span><strong>Dedicated Infrastructure Care</strong></span></li>
-      </ul>
-      <button class="btn-primary tier-btn" onclick="selectTier('Custom Web Application / SaaS')">Choose Enterprise</button>
-    </div>
-  </div>
-</section>
-
-<section id="portfolio">
-  <div class="sec-header reveal">
-    <p class="section-label">Proven Execution</p>
-    <h2 class="section-title">Architectures we have<br><span class="text-gradient">Designed & Deployed</span></h2>
-    <p class="section-desc">We bridge the space between complex backend logic, heavy industrial hardware telemetry, and stunning user experiences.</p>
-  </div>
-
-  <div class="port-grid reveal-grid">
-    <div class="port-card">
-      <div class="port-img-placeholder">[ LIVE INDUSTRIAL METRICS HMI ]</div>
-      <div class="port-info">
-        <span class="port-tag">Web App + Modbus RTU</span>
-        <h3 class="port-title">Dynamic Instrument Telemetry</h3>
-        <p class="port-desc">A real-time monitoring dashboard pulling data directly from hardware arrays, built to process live field analytics without interface lag.</p>
-        <div class="port-meta">Tech Stack: <span>Python / Cloud Sync</span></div>
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(108,92,231,.12)">🎯</div>
+      <div>
+        <div class="phase-num" style="color:var(--accent)">Phase 01 · Opener</div>
+        <div class="phase-title">Pattern-Interrupt Introduction</div>
       </div>
     </div>
-
-    <div class="port-card">
-      <div class="port-img-placeholder">[ SAAS LEAD CAPTURE ENGINE ]</div>
-      <div class="port-info">
-        <span class="port-tag">Growth Platform</span>
-        <h3 class="port-title">Bespoke Enterprise Portal</h3>
-        <p class="port-desc">A highly scalable web architecture featuring localized on-page SEO targeting, instant lead routing, and dynamic data tables.</p>
-        <div class="port-meta">Tech Stack: <span>React / Node.js / PostgreSQL</span></div>
+    <div class="phase-body">
+      <div class="slabel">PRIMARY OPENER</div>
+      <div class="script-box">
+        <div class="role" style="color:var(--accent)">YOU SAY →</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"Hi, is this [Name]? Good — I'll be upfront, this is a cold call, so I'll keep it to two minutes max. My name is [Your Name] from <strong>Semantic Reworks</strong>. We build websites for businesses in [City/Industry] — specifically ones that actually bring in customers rather than just sit there looking pretty. I just want to ask you one quick question. Is that okay?"</div>
       </div>
-    </div>
-
-    <div class="port-card">
-      <div class="port-img-placeholder">[ EDGE GRAPHICS CONTROLLER ]</div>
-      <div class="port-info">
-        <span class="port-tag">Hardware + Software</span>
-        <h3 class="port-title">P10 LED Matrix Dashboard</h3>
-        <p class="port-desc">Engineered an interactive panel array optimized for low-latency visual performance via direct edge hardware microcontrollers.</p>
-        <div class="port-meta">Tech Stack: <span>Raspberry Pi 5 / GPIO / Python</span></div>
+      <div class="slabel" style="margin-top:14px">IF THEY SAY "WHAT'S THE QUESTION?"</div>
+      <div class="script-box">
+        <div class="role" style="color:var(--a3)">BRIDGE →</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"When someone searches for [what they sell] in [their city] on Google right now — does your business show up, or does a competitor take that customer?"</div>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">💡</div>
+        <div class="tip-text"><strong>Why this works:</strong> The Google question makes the pain instantly real and personal. They either know they don't rank (pain confirmed) or they're not sure (curiosity opened). Either way, you're in the conversation.</div>
       </div>
     </div>
   </div>
-</section>
 
-<section id="services">
-  <div class="sec-header reveal">
-    <p class="section-label">Ecosystem</p>
-    <h2 class="section-title">Full-Stack <span class="text-gradient">Digital Services</span></h2>
-    <p class="section-desc">A great website is just the start. We layer in hardware interface capabilities, automation, and performance marketing to scale your operation.</p>
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(0,206,201,.10)">🔍</div>
+      <div>
+        <div class="phase-num" style="color:var(--a2)">Phase 02 · Discovery</div>
+        <div class="phase-title">3 Questions That Reveal the Real Pain</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:var(--a2)">Q1 — CURRENT SITUATION</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"Right now — do you have a website, or is your business mainly running through referrals and social media?"</div>
+      </div>
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:var(--a2)">Q2 — THE RESULT QUESTION</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"If you do have a site — roughly how many enquiries or leads does it bring you in a month? Even a ballpark is fine."</div>
+      </div>
+      <div class="script-box">
+        <div class="role" style="color:var(--a2)">Q3 — THE VISION QUESTION</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"If your website was converting 5–10 new enquiries every month on autopilot — how would that change things for your business?"</div>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">🎙️</div>
+        <div class="tip-text"><strong>Listen for:</strong> "We get nothing from it", "it's outdated", "my nephew built it", "we rely on word of mouth". These phrases are your green light to pivot to the value pitch.</div>
+      </div>
+    </div>
   </div>
-  
-  <div class="srv-grid reveal-grid">
-    <div class="srv">
-      <div class="srv-icon">🖥</div>
-      <h3 class="srv-title">Web & Software Dev</h3>
-      <p class="srv-desc">Custom websites and digital platforms built with modern tech stacks, architected for absolute speed, layout precision, and scalability.</p>
-    </div>
-    <div class="srv">
-      <div class="srv-icon">⚙️</div>
-      <h3 class="srv-title">Hardware & IIoT</h3>
-      <p class="srv-desc">For businesses requiring physical assets to stream cleanly to their database—we bridge hardware with tailored data-logging stacks.</p>
-    </div>
-    <div class="srv">
-      <div class="srv-icon">🤖</div>
-      <h3 class="srv-title">Applied AI/ML</h3>
-      <p class="srv-desc">We build intelligence directly into your production web builds—from customized intent chatbots to backend analytics workflows.</p>
-    </div>
-    <div class="srv">
-      <div class="srv-icon">📈</div>
-      <h3 class="srv-title">Growth Marketing</h3>
-      <p class="srv-desc">Your platform needs to convert traffic. We establish clean, reliable automated tracking funnels that turn visitors into core client requests.</p>
-    </div>
-  </div>
-</section>
 
-<section id="about">
-  <div class="about-wrap">
-    <div class="reveal">
-      <p class="section-label">Our Story</p>
-      <h2 class="section-title">Businesses deserve<br><span class="text-gradient">better web software.</span></h2>
-      <p class="section-desc" style="margin-bottom:1.5rem;">
-        We founded Semantic Reworks because growing companies were constantly overpaying for slow, generic templates that failed to generate actual business growth.
-      </p>
-      <p class="section-desc">
-        Operating out of Kolkata, we provide deep engineering excellence to teams everywhere. Every client gets an asset that is designed to convert and built to last.
-      </p>
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(253,203,110,.10)">⚡</div>
+      <div>
+        <div class="phase-num" style="color:var(--a3)">Phase 03 · The Fork</div>
+        <div class="phase-title">Two Paths — Exact Wording</div>
+      </div>
     </div>
-    
-    <div class="belief-block reveal-grid">
-      <div class="belief">
-        <span class="belief-n">01</span>
-        <div class="belief-body">
-          <strong>An Asset, Not a Bill</strong>
-          <p>Every single line of code written should actively multiply revenue and client interactions.</p>
+    <div class="phase-body">
+      <div class="fork-grid">
+        <div class="fork-card resist">
+          <div class="fork-tag">IF THEY RESIST — "We already have a website / don't need one"</div>
+          <div class="fork-line">"Totally fair — most businesses do have something in place. My question is: is that site actively bringing you new enquiries, or is it more of a digital business card that people glance at and leave? Because those are very different things. We don't rebuild for the sake of it — we only take on a project if we can show you a clear reason why the current one is costing you customers. Would you be open to a 10-minute free audit — I'll tell you exactly what's working and what isn't, no obligation."</div>
         </div>
-      </div>
-      <div class="belief">
-        <span class="belief-n">02</span>
-        <div class="belief-body">
-          <strong>Performance is Vital</strong>
-          <p>Slow interfaces kill engagement. We tune and optimize asset loading weights for instant feedback loops.</p>
-        </div>
-      </div>
-      <div class="belief">
-        <span class="belief-n">03</span>
-        <div class="belief-body">
-          <strong>Conversion Design</strong>
-          <p>Visual aesthetic means nothing if the viewer leaves your ecosystem without taking action.</p>
-        </div>
-      </div>
-      <div class="belief">
-        <span class="belief-n">04</span>
-        <div class="belief-body">
-          <strong>Scalable Foundations</strong>
-          <p>We program clean, modular architectures so you never have to throw away code to add features later.</p>
+        <div class="fork-card admit">
+          <div class="fork-tag">IF THEY ADMIT THE PROBLEM — "Yeah it doesn't do much"</div>
+          <div class="fork-line">"That's actually very common — and it's almost never the business's fault. Most websites are built by someone who knows how to make things look good but has no idea about how Google works or how to turn a visitor into an enquiry. That's the exact gap we close. We build sites that rank, load fast, and have one job — to get someone to contact you. Can I show you what that looks like for a business similar to yours? Takes 20 minutes, completely free."</div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<section id="contact">
-  <div class="contact-wrap">
-    <div class="c-info reveal">
-      <p class="section-label">Let's Connect</p>
-      <h2 class="section-title">Start your<br><span class="text-gradient">project with us.</span></h2>
-      <p class="section-desc" style="margin-bottom: 2rem;">
-        Tell us about your operational goals. Our development team in Kolkata is engineered to build it right.
-      </p>
-      
-      <div class="c-detail-list">
-        <div class="c-detail">
-          <div class="c-detail-icon">📧</div>
-          <div>
-            <div class="c-detail-lbl">Email Us</div>
-            <div class="c-detail-val">hello@semanticreworks.com</div>
-          </div>
-        </div>
-        <div class="c-detail">
-          <div class="c-detail-icon">📍</div>
-          <div>
-            <div class="c-detail-lbl">Location</div>
-            <div class="c-detail-val">Kolkata, India</div>
-          </div>
-        </div>
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(253,121,168,.10)">💎</div>
+      <div>
+        <div class="phase-num" style="color:var(--a4)">Phase 04 · Value Pitch</div>
+        <div class="phase-title">2-Sentence Bridge — No Jargon</div>
       </div>
     </div>
-
-    <div class="reveal">
-      <form id="contactForm" class="c-form" action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" onsubmit="handleSubmit(event)">
-        
-        <input type="hidden" name="access_key" value="ab28b3f6-4c50-43e2-b1cc-0bbe27c31a69">
-        <input type="hidden" name="subject" value="New Web Project Query — Semantic Reworks">
-        <input type="hidden" name="from_name" value="Semantic Reworks Studio">
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-        
-        <div id="formMsg" class="form-msg"></div>
-
-        <div class="f-row">
-          <div class="f-group">
-            <label for="fname">First Name *</label>
-            <input id="fname" name="firstName" type="text" placeholder="John" required />
-          </div>
-          <div class="f-group">
-            <label for="lname">Last Name *</label>
-            <input id="lname" name="lastName" type="text" placeholder="Doe" required />
-          </div>
-        </div>
-        
-        <div class="f-row">
-          <div class="f-group">
-            <label for="email">Work Email *</label>
-            <input id="email" name="email" type="email" placeholder="john@company.com" required />
-          </div>
-          <div class="f-group">
-            <label for="phone">Phone Number *</label>
-            <input id="phone" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required />
-          </div>
-        </div>
-        
-        <div class="f-group">
-          <label for="service">Service Needed *</label>
-          <select id="service" name="service" required>
-            <option value="" disabled selected>Select a service...</option>
-            <option value="Business Website (Small / Starter)">Business Website (Small / Starter)</option>
-            <option value="Growth Website with CMS &amp; SEO">Growth Website with CMS &amp; SEO</option>
-            <option value="Custom Web Application / SaaS">Custom Web Application / SaaS</option>
-            <option value="AI / Chatbot Integration">AI / Chatbot Integration</option>
-          </select>
-        </div>
-
-        <div class="f-group">
-          <label for="msg">Project Details *</label>
-          <textarea id="msg" name="message" placeholder="What does your company achieve? Outline what features you need this ecosystem to run." required></textarea>
-        </div>
-
-        <div class="f-group">
-          <label for="docUpload">Attach Project Brief (Optional)</label>
-          <input type="file" id="docUpload" name="file" accept=".pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx" onchange="validateFileSize(this)" />
-          <span class="file-hint">Note: Max size allowed: 10MB. Files arrive formatted as an instant download link.</span>
-          <span id="fileError" class="file-error">File volume exceeds 10MB. Please select a lighter weight file.</span>
-        </div>
-        
-        <button type="submit" class="btn-primary f-submit" id="submitBtn">Send Message</button>
-      </form>
+    <div class="phase-body">
+      <div class="script-box">
+        <div class="role" style="color:var(--a4)">THE PITCH →</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"At <strong>Semantic Reworks</strong>, we build high-performance websites for growing businesses — designed to rank on Google, load in under 2 seconds, and turn visitors into paying customers. Unlike most web agencies, we focus on what happens after launch — the SEO, the conversion flow, the calls-to-action — so your site works as a full-time salesperson, not a brochure."</div>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">⚠️</div>
+        <div class="tip-text"><strong>Never say:</strong> React, Node.js, PostgreSQL, responsive design, UI/UX on the first call. Clients buy outcomes — more customers, more calls, more revenue. Technology is for the proposal stage.</div>
+      </div>
     </div>
   </div>
-</section>
-</main>
 
-<a href="https://wa.me/918250278119?text=Hi%20Semantic%20Reworks,%20I'm%20interested%20in%20discussing%20a%20project." class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
-<footer>
-  <div class="foot-inner">
-    <div class="foot-brand">
-      <h4>Semantic<span>.</span>Reworks</h4>
-      <p>Premium automation and software studio engineering highly functional web assets.</p>
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(85,239,196,.10)">🔒</div>
+      <div>
+        <div class="phase-num" style="color:var(--a5)">Phase 05 · The Close</div>
+        <div class="phase-title">Lock In the Next Step</div>
+      </div>
     </div>
-    <div class="foot-col">
-      <h5>Core Solutions</h5>
-      <ul>
-        <li><a href="#tiers">Web Deployment</a></li>
-        <li><a href="#portfolio">Industrial Data HMIs</a></li>
-        <li><a href="#services">IoT Architectures</a></li>
-      </ul>
-    </div>
-    <div class="foot-col">
-      <h5>Ecosystem</h5>
-      <ul>
-        <li><a href="#about">Our Story</a></li>
-        <li><a href="#contact">Consultation Request</a></li>
-      </ul>
+    <div class="phase-body">
+      <div class="slabel">PRIMARY CLOSE</div>
+      <div class="script-box">
+        <div class="role" style="color:var(--a5)">SAY THIS →</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"Here's what I'd suggest — let me do a free 15-minute website audit of your current online presence and show you exactly what's holding it back. I'll screen-share the whole thing so you can see it live. If you like what you hear, we can talk about next steps. If not, you'll at least know what to fix. What does your schedule look like — does Tuesday or Wednesday work better for you?"</div>
+      </div>
+      <div class="slabel" style="margin-top:14px">IF THEY WANT TO THINK ABOUT IT</div>
+      <div class="script-box">
+        <div class="role" style="color:var(--a3)">SOFT BRIDGE →</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">"No problem at all. Let me send you a quick before/after of a website we rebuilt for a [similar business type] — shows the difference in enquiries before and after. Takes 30 seconds to look at. What's the best number to send it on — WhatsApp?"</div>
+      </div>
     </div>
   </div>
-  <div class="foot-bottom">
-    <p>© 2026 Semantic Reworks. All rights reserved.</p>
-    <p>Kolkata, West Bengal, India</p>
+
+</div>
+
+<!-- ══════════════════════════════
+     LINKEDIN
+══════════════════════════════ -->
+<div class="page" id="linkedin">
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(10,102,194,.12)">💼</div>
+      <div>
+        <div class="ch-name" style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700">LinkedIn DM Sequence</div>
+        <div class="ch-sub">Founders · Business Owners · Marketing Managers</div>
+      </div>
+    </div>
+    <div class="phase-body">
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#6ab4f5">CONNECTION REQUEST NOTE</div>
+          <div class="mv-tag" style="background:rgba(10,102,194,.1);color:#6ab4f5;border:1px solid rgba(10,102,194,.3)">DAY 0 · 280 CHARS MAX</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hi [Name], came across [Company] while looking at businesses in [industry/city]. We build websites for growing brands that want more customers from Google — thought it might be worth connecting. No pitch, just good to be in the same network.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#6ab4f5">AFTER THEY ACCEPT — OPENER DM</div>
+          <div class="mv-tag" style="background:rgba(10,102,194,.1);color:#6ab4f5;border:1px solid rgba(10,102,194,.3)">DAY 1–2</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Thanks for connecting, [Name].
+
+Quick honest question — if someone in [their city] searched "[their service] near me" on Google right now, would [Company] show up on the first page?
+
+I ask because that's usually the fastest way to tell whether a website is working or just sitting there. Happy to be told it's ranking fine — genuinely curious.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#6ab4f5">NO REPLY — VALUE DROP</div>
+          <div class="mv-tag" style="background:rgba(253,203,110,.1);color:#fdcb6e;border:1px solid rgba(253,203,110,.3)">DAY 5</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hey [Name] — one more try before I leave you alone.
+
+I had a quick look at [Company's website] and noticed [one specific thing — e.g., no clear call-to-action / loads slowly on mobile / not showing on Google Maps].
+
+We fixed the exact same issue for a [similar business] and they went from 0 website enquiries to 8–12 a month.
+
+Worth a free 10-minute look? I'll show you exactly what I'd change.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#6ab4f5">FINAL BREAKUP MESSAGE</div>
+          <div class="mv-tag" style="background:rgba(253,121,168,.1);color:#fd79a8;border:1px solid rgba(253,121,168,.3)">DAY 12</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hi [Name] — closing my note on [Company] today.
+
+If getting more customers from your website ever becomes a priority, we're easy to find — Semantic Reworks on Google.
+
+Wishing you and the team a strong quarter either way.</div>
+        </div>
+      </div>
+
+      <div class="prompt-section">
+        <div class="pt">💡 SITUATION PROMPTS</div>
+        <div class="prompt-item">
+          <div class="p-tag" style="background:rgba(85,239,196,.1);color:#55efc4;border:1px solid rgba(85,239,196,.3)">WARM</div>
+          <div class="p-text"><strong>They liked or commented on your post:</strong> "Hey [Name] — glad that landed. Since you're clearly thinking about this: does your current website bring you actual leads, or is it more of a placeholder? Asking because that's what we fix at Semantic Reworks."</div>
+        </div>
+        <div class="prompt-item">
+          <div class="p-tag" style="background:rgba(253,203,110,.1);color:#fdcb6e;border:1px solid rgba(253,203,110,.3)">PAIN</div>
+          <div class="p-text"><strong>They posted about struggling with online visibility:</strong> "Saw your post about [their issue]. 9 times out of 10 this comes down to one of three things on the website itself. Happy to tell you which one it is for yours — takes me 5 minutes to check."</div>
+        </div>
+        <div class="prompt-item">
+          <div class="p-tag" style="background:rgba(108,92,231,.1);color:#a89dfc;border:1px solid rgba(108,92,231,.3)">NEW BIZ</div>
+          <div class="p-text"><strong>They just announced a new business or product:</strong> "Congrats on the launch, [Name]! Does [Company] have a website set up to capture that momentum, or is it still in the works? We specialize in launch-ready sites that rank from day one — happy to share what that looks like."</div>
+        </div>
+        <div class="prompt-item">
+          <div class="p-tag" style="background:rgba(0,206,201,.1);color:#00cec9;border:1px solid rgba(0,206,201,.3)">REFERRAL</div>
+          <div class="p-text"><strong>Referred by a mutual connection:</strong> "[Mutual] suggested I reach out — said you're the one handling growth at [Company]. We recently rebuilt a website for [similar business] that now brings in [X] enquiries/month. Would love to show you the before/after if relevant?"</div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</footer>
+</div>
+
+<!-- ══════════════════════════════
+     INSTAGRAM
+══════════════════════════════ -->
+<div class="page" id="instagram">
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(225,48,108,.12)">📸</div>
+      <div>
+        <div class="ch-name" style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700">Instagram DM Sequence</div>
+        <div class="ch-sub">Local businesses · Boutique brands · Startups · Service providers</div>
+      </div>
+    </div>
+    <div class="phase-body">
+
+      <div class="tip" style="margin-bottom:16px">
+        <div class="tip-icon">📌</div>
+        <div class="tip-text"><strong>Best targets on Instagram:</strong> Restaurants, salons, boutiques, home services, local retailers, coaches, freelancers, small clinics — anyone running a business primarily through Instagram with no strong website.</div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#f472b6">OPENER — AFTER FOLLOWING THEM</div>
+          <div class="mv-tag" style="background:rgba(225,48,108,.1);color:#f472b6;border:1px solid rgba(225,48,108,.3)">DAY 1</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hey [Name] 👋 Just followed — love what you've built with [Brand/Business]. Quick question: do you have a website, or is everything happening through Instagram for you right now?
+
+Asking because I work with businesses like yours to build websites that bring in customers even when you're not posting. Just genuinely curious where you're at.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#f472b6">FREE AUDIT OFFER</div>
+          <div class="mv-tag" style="background:rgba(225,48,108,.1);color:#f472b6;border:1px solid rgba(225,48,108,.3)">DAY 3</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hey [Name] — I had a look at your website (or Google listing) and spotted something that's likely costing you customers: [specific issue — e.g., doesn't show up when I search "[their service] in Kolkata" / no contact button visible on mobile / takes 8 seconds to load].
+
+These are all fixable in a few days. Want me to send you a quick voice note walking through what I'd change? Free — no strings.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#f472b6">STORY REPLY HOOK</div>
+          <div class="mv-tag" style="background:rgba(85,239,196,.1);color:#55efc4;border:1px solid rgba(85,239,196,.3)">WHEN THEY POST A STORY</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">This looks amazing 🔥 Serious question — are customers finding you through Google or mostly through Instagram and word of mouth?
+
+Reason I ask: we help businesses like yours set up a website that works as a full-time salesperson. People search, they find you, they contact you — even while you sleep. Just wondering if that's on your radar.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#f472b6">NO WEBSITE — DIRECT APPROACH</div>
+          <div class="mv-tag" style="background:rgba(253,203,110,.1);color:#fdcb6e;border:1px solid rgba(253,203,110,.3)">HIGH INTENT</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hey [Name] — noticed [Business] doesn't have a website yet. That's actually a good thing right now — starting fresh means we can build it the right way from day one: fast, Google-friendly, and set up to convert visitors into bookings/enquiries.
+
+We've done this for a few [similar businesses] in Kolkata. Want to see a quick example? I can share in 2 minutes.</div>
+        </div>
+      </div>
+
+      <div class="prompt-section">
+        <div class="pt">💡 INSTAGRAM SITUATION PROMPTS</div>
+        <div class="prompt-item">
+          <div class="p-tag" style="background:rgba(225,48,108,.1);color:#f472b6;border:1px solid rgba(225,48,108,.3)">LOCAL</div>
+          <div class="p-text"><strong>Kolkata business with no website:</strong> "Hey! Found [Business] on Instagram — love the setup. We build websites for Kolkata businesses that want to get found on Google, not just Instagram. I could put together a free mockup of what yours could look like. Interested?"</div>
+        </div>
+        <div class="prompt-item">
+          <div class="p-tag" style="background:rgba(108,92,231,.1);color:#a89dfc;border:1px solid rgba(108,92,231,.3)">OUTDATED</div>
+          <div class="p-text"><strong>They have an outdated website:</strong> "Hey [Name] — found your website while looking up [business type] in [city]. It looks like it hasn't been updated in a while. We rebuilt a similar one recently and the client started getting 6–8 new enquiries a month within 60 days. Worth a free look?"</div>
+        </div>
+        <div class="prompt-item">
+          <div class="p-tag" style="background:rgba(0,206,201,.1);color:#00cec9;border:1px solid rgba(0,206,201,.3)">PRODUCT BIZ</div>
+          <div class="p-text"><strong>Product-based business selling on Instagram:</strong> "Your products look incredible — do you have an online store, or is everything done through DMs right now? We build e-commerce sites that let customers buy directly and find you on Google. Could be a game changer for [Brand]."</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     FACEBOOK
+══════════════════════════════ -->
+<div class="page" id="facebook">
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(24,119,242,.12)">👥</div>
+      <div>
+        <div class="ch-name" style="font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700">Facebook Messenger & Groups</div>
+        <div class="ch-sub">Local SMEs · Business groups · Community boards · Kolkata market</div>
+      </div>
+    </div>
+    <div class="phase-body">
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#60a5fa">MESSENGER — COLD DM TO BUSINESS PAGE OWNER</div>
+          <div class="mv-tag" style="background:rgba(24,119,242,.1);color:#60a5fa;border:1px solid rgba(24,119,242,.3)">COLD</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hi [Name],
+
+Found [Business] on Facebook and took a quick look at your online presence. One thing I noticed: when I search "[their service] in [city]" on Google, [Business] doesn't appear — which means you're probably losing customers to competitors who do show up.
+
+I'm [Your Name] from Semantic Reworks. We fix exactly this — websites built to rank on Google and turn visitors into enquiries.
+
+Would you find it useful if I put together a free 3-point audit of your current site? I can have it ready in 24 hours.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#60a5fa">BUSINESS GROUP POST — FREE AUDIT OFFER</div>
+          <div class="mv-tag" style="background:rgba(85,239,196,.1);color:#55efc4;border:1px solid rgba(85,239,196,.3)">GROUP POST</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">🔍 Free Website Audit for Kolkata Business Owners — 5 Spots This Week
+
+If your business has a website that isn't generating enquiries, I'll review it and tell you the exact 3 things holding it back — for free.
+
+I'm [Name] from Semantic Reworks. We build high-performance websites for growing businesses. I do these audits because most sites have the same fixable problems — and I'd rather show you than pitch you.
+
+Comment "AUDIT" below or DM me directly.
+First 5 responses get a full screen-recorded walkthrough.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#60a5fa">AFTER SOMEONE ASKS "HOW DO I GET MORE CUSTOMERS?" IN A GROUP</div>
+          <div class="mv-tag" style="background:rgba(253,203,110,.1);color:#fdcb6e;border:1px solid rgba(253,203,110,.3)">COMMENT REPLY</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Great question — it usually comes down to 3 things:
+
+1. Can Google find your business when someone searches your service?
+2. Does your website load fast on mobile?
+3. Is there a clear reason for visitors to contact you right now?
+
+Most business websites fail on at least 2 of these. Happy to check yours and give you a straight answer — DM me your website link and I'll take a look today.</div>
+        </div>
+      </div>
+
+      <div class="msg-variant">
+        <div class="mv-head">
+          <div class="mv-label" style="color:#60a5fa">FOLLOW-UP AFTER AUDIT COMMENT</div>
+          <div class="mv-tag" style="background:rgba(108,92,231,.1);color:#a89dfc;border:1px solid rgba(108,92,231,.3)">WARM FOLLOW-UP</div>
+        </div>
+        <div class="mv-body">
+          <div class="msg-text">Hey [Name] — I reviewed [website] and here's what I found:
+
+1. [Specific issue 1 — e.g., not showing on Google for "[service] in Kolkata"]
+2. [Specific issue 2 — e.g., mobile page load is over 6 seconds]
+3. [Specific issue 3 — e.g., no visible contact number or CTA above the fold]
+
+All three are fixable. Issue #1 alone is likely costing you 5–10 enquiries a month.
+
+Want to jump on a 15-minute call to talk through how we'd fix it?</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     FOLLOW-UPS
+══════════════════════════════ -->
+<div class="page" id="followup">
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(85,239,196,.10)">🔄</div>
+      <div>
+        <div class="phase-num" style="color:var(--a5)">7-Touch Sequence</div>
+        <div class="phase-title">Website Service Follow-Up Framework</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <div class="fu-step">
+        <div class="fu-dot" style="border-color:var(--accent);color:var(--accent)">1</div>
+        <div class="fu-content">
+          <div class="fu-day">DAY 0 · SAME DAY AS FIRST CONTACT</div>
+          <div class="fu-action">Send the case study / audit result</div>
+          <div class="fu-note">"Great chatting, [Name]. As promised — here's the before/after of a website we rebuilt for a [similar business]. The client went from 0 web enquiries to [X] per month in 60 days. Let me know what questions it raises."</div>
+        </div>
+      </div>
+      <div class="fu-step">
+        <div class="fu-dot" style="border-color:var(--a2);color:var(--a2)">2</div>
+        <div class="fu-content">
+          <div class="fu-day">DAY 3</div>
+          <div class="fu-action">Value add — share something useful</div>
+          <div class="fu-note">"[Name] — sharing this quick checklist on what Google looks for when ranking local business websites. Relevant to what we talked about — worth 2 minutes."</div>
+        </div>
+      </div>
+      <div class="fu-step">
+        <div class="fu-dot" style="border-color:var(--a3);color:var(--a3)">3</div>
+        <div class="fu-content">
+          <div class="fu-day">DAY 6</div>
+          <div class="fu-action">Soft push — ask for a yes or no</div>
+          <div class="fu-note">"Hey [Name] — just checking in. Does the free website audit still make sense to do this week, or has the timing shifted? Happy either way."</div>
+        </div>
+      </div>
+      <div class="fu-step">
+        <div class="fu-dot" style="border-color:var(--a4);color:var(--a4)">4</div>
+        <div class="fu-content">
+          <div class="fu-day">DAY 12</div>
+          <div class="fu-action">New angle — different pain point</div>
+          <div class="fu-note">"[Name] — different question: is [Company] listed on Google Maps with updated info? A lot of local businesses lose customers because their Google Business Profile is incomplete or missing. We sort that as part of every build — mentioning in case it's relevant."</div>
+        </div>
+      </div>
+      <div class="fu-step">
+        <div class="fu-dot" style="border-color:var(--a5);color:var(--a5)">5</div>
+        <div class="fu-content">
+          <div class="fu-day">DAY 20</div>
+          <div class="fu-action">Social proof drop</div>
+          <div class="fu-note">"We just launched a new website for a [similar business type] in [city]. They're already getting calls from Google within the first week. Thought of you — happy to show you the site if you're curious what's possible."</div>
+        </div>
+      </div>
+      <div class="fu-step">
+        <div class="fu-dot" style="border-color:var(--muted);color:var(--muted)">6</div>
+        <div class="fu-content">
+          <div class="fu-day">DAY 35</div>
+          <div class="fu-action">Quarterly re-open</div>
+          <div class="fu-note">"Hi [Name] — it's been a few weeks. Just checking if the website situation has changed at [Company], or if budget timing has shifted. No pressure — just keeping the door open."</div>
+        </div>
+      </div>
+      <div class="fu-step">
+        <div class="fu-dot" style="border-color:var(--a3);color:var(--a3)">7</div>
+        <div class="fu-content">
+          <div class="fu-day">DAY 50 · FINAL</div>
+          <div class="fu-action">The breakup — reversal psychology</div>
+          <div class="fu-note">"[Name] — closing my file on [Company] today. If a website that brings in customers ever becomes a priority, we're easy to find — Semantic Reworks on Google. Best of luck with the business."</div>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-icon">📊</div>
+        <div class="tip-text"><strong>Most people quit after 1–2 touches.</strong> The data says 80% of closed deals happen after touch 5 or later. Consistent, value-first follow-up is your biggest competitive edge.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     OBJECTIONS
+══════════════════════════════ -->
+<div class="page" id="objections">
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(253,203,110,.10)">🛡️</div>
+      <div>
+        <div class="phase-num" style="color:var(--a3)">Objection Vault</div>
+        <div class="phase-title">Every Website Objection + Exact Response</div>
+      </div>
+    </div>
+    <div class="phase-body">
+      <table class="obj-table">
+        <thead>
+          <tr><th>OBJECTION</th><th>EXACT RESPONSE</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"We already have a website."</td>
+            <td>"Great — is it bringing you new enquiries, or is it more of a digital brochure people glance at and leave? Having a site and having a site that works are two very different things. Would you be open to a free 10-minute check to see which category yours falls into?"</td>
+          </tr>
+          <tr>
+            <td>"It's too expensive."</td>
+            <td>"Completely fair. Can I ask — how many new customers would your business need from the website each month to make it worthwhile? Because once we work that number out, the investment usually looks very different. Our entry package starts at [price] — want me to break down the ROI?"</td>
+          </tr>
+          <tr>
+            <td>"We get customers from referrals, we don't need a website."</td>
+            <td>"That's a great position to be in — referrals are the best kind. My question is: when those referrals go to look you up online before calling, what do they find? If the answer is nothing or something outdated, you might be losing 20–30% of them before they ever contact you."</td>
+          </tr>
+          <tr>
+            <td>"My nephew / someone already built one for us."</td>
+            <td>"That's really common — and there's nothing wrong with that as a starting point. The issue is usually that it was built to look good but not to rank on Google or convert visitors. Does your current site show up when someone searches [their service] in [city]?"</td>
+          </tr>
+          <tr>
+            <td>"I can build it on Wix/Shopify myself."</td>
+            <td>"You absolutely can — those platforms are great for getting something up quickly. The gap usually shows up in the SEO and conversion side: Google tends to rank custom-built sites significantly higher, and the lead-capture flow needs specific design decisions that templates don't make for you."</td>
+          </tr>
+          <tr>
+            <td>"We don't have budget right now."</td>
+            <td>"Understood. When does budget typically open up for you — end of quarter, new financial year? I'll note that down and reach out then. In the meantime, would it help to have the audit done now so you know exactly what you're looking at when the timing is right?"</td>
+          </tr>
+          <tr>
+            <td>"Send me your portfolio / pricing."</td>
+            <td>"Absolutely — sending it over now. To make sure what I send is actually relevant: is your priority getting found on Google, getting more enquiries from the site, or both? That way I can share the most relevant examples."</td>
+          </tr>
+          <tr>
+            <td>"We tried a web agency before and it was a bad experience."</td>
+            <td>"I'm sorry to hear that — honestly it's more common than it should be. Can I ask what went wrong? Because if it was delays, lack of communication, or a site that never ranked — those are the specific things I'd want to show you we do differently before asking for a minute more of your time."</td>
+          </tr>
+          <tr>
+            <td>"I need to think about it."</td>
+            <td>"Of course. Let me make it easy — I'll send you one short case study of a similar business and a rough idea of what a project would look like. No commitment, no follow-up unless you ask. If after that it still doesn't feel right, I'll close the file — fair?"</td>
+          </tr>
+          <tr>
+            <td>"We're too small / just starting out."</td>
+            <td>"That's actually the best time to do it — building the right digital foundation from day one is far cheaper than fixing a bad one later. We have a starter package specifically designed for early-stage businesses. Want to see what that includes?"</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     AI PROMPTS
+══════════════════════════════ -->
+<div class="page" id="prompts">
+  <div class="phase-card">
+    <div class="phase-head">
+      <div class="phase-icon" style="background:rgba(108,92,231,.12)">🤖</div>
+      <div>
+        <div class="phase-num" style="color:var(--accent)">AI Prompt Toolkit</div>
+        <div class="phase-title">Copy-Paste Prompts — Website Service Focus</div>
+      </div>
+    </div>
+    <div class="phase-body">
+
+      <div class="slabel">COLD CALL</div>
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:var(--accent)">PERSONALIZED COLD CALL SCRIPT</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">Act as a B2B sales expert. Write a 90-second cold call script for Semantic Reworks, a web development agency in Kolkata. Target: [Job Title] at [Company Name] in [Industry/City]. Their current website problem is: [describe issue — e.g., doesn't rank on Google / outdated / no enquiry form]. The call goal is to book a free 15-minute website audit call. Use a pattern-interrupt opener, one Google-ranking discovery question, a 2-sentence outcome-focused pitch, and a presumptive close offering Tuesday or Wednesday. Make it sound human and natural — not salesy.</div>
+      </div>
+
+      <div class="slabel" style="margin-top:16px">LINKEDIN</div>
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:#6ab4f5">PERSONALIZED CONNECTION NOTE</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">Write a LinkedIn connection request note (under 280 characters) from Semantic Reworks to [Name], [Title] at [Company] in [Industry/City]. We build websites that rank on Google and convert visitors into enquiries. Reference something specific about their role or company. Sound like a human, not a salesperson. No emojis.</div>
+      </div>
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:#6ab4f5">FOLLOW-UP AFTER NO REPLY</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">I messaged [Name] on LinkedIn 5 days ago about their website not generating leads. No reply. Write a follow-up DM under 80 words that: mentions one specific website result we achieved for a similar client, doesn't sound desperate, and ends with a simple yes/no question. From Semantic Reworks. Conversational tone.</div>
+      </div>
+
+      <div class="slabel" style="margin-top:16px">INSTAGRAM & FACEBOOK</div>
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:#f472b6">INSTAGRAM DM FROM PROFILE RESEARCH</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">Write an Instagram DM to [Name] who runs [type of business] in [city/area]. Their Instagram shows [describe: products, content, what they sell]. They have [no website / an outdated website / Instagram-only presence]. I'm from Semantic Reworks — we build websites that bring in customers from Google. The DM should feel personal, ask one genuine question about their online presence, and not pitch anything yet. Under 60 words. Friendly, casual tone.</div>
+      </div>
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:#60a5fa">FACEBOOK GROUP VALUE POST</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">Write a Facebook group post for Semantic Reworks to post in a Kolkata business group. Goal: generate inbound website leads without being salesy. Offer a free website audit. The post should: open with a relatable pain point about losing customers online, briefly say who we are, offer one free and specific thing of value, end with an easy CTA (comment "AUDIT" or DM). Under 150 words. No jargon. Conversational.</div>
+      </div>
+
+      <div class="slabel" style="margin-top:16px">PROPOSAL & CLOSE</div>
+      <div class="script-box" style="margin-bottom:10px">
+        <div class="role" style="color:var(--a5)">POST-AUDIT PROPOSAL EMAIL</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">Write a follow-up email from Semantic Reworks after a free website audit with [Name] at [Company]. During the audit we found: [paste 2–3 specific issues]. We are proposing: [new website / SEO rebuild / landing page]. The email should: echo their specific words back, clearly state what we'd fix and why it matters, include a simple next step, feel like it was written by a founder. Under 180 words.</div>
+      </div>
+      <div class="script-box">
+        <div class="role" style="color:var(--a5)">OBJECTION REBUTTAL GENERATOR</div>
+        <button class="copy-btn" onclick="copyText(this)">COPY</button>
+        <div class="line">I'm selling website development services for Semantic Reworks and the prospect said: "[paste their exact objection]". Give me 3 response options: (1) Empathize and reframe the value (2) Ask a diagnostic question that makes them think (3) Use a social proof example from a similar business. Keep each under 45 words, conversational, not pushy. Focus on outcomes — more customers, more Google visibility, more enquiries.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <script>
-  if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
-  window.addEventListener('load', () => { window.scrollTo(0, 0); });
-
-  const nav = document.getElementById('navbar');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40));
-  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
-  
-  // Advanced Dual-Channel Intersection Observer Architecture
-  (() => {
-    const defaultObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    
-    document.querySelectorAll('.reveal').forEach(el => defaultObs.observe(el));
-    document.querySelectorAll('.reveal-grid').forEach(el => defaultObs.observe(el));
-  })();
-
-  // Smooth Tier Selection Flow with Visual Pulse Accent
-  function selectTier(tierValue) {
-    const serviceSelect = document.getElementById('service');
-    const contactSection = document.getElementById('contact');
-    const contactForm = document.getElementById('contactForm');
-    
-    if (serviceSelect && contactSection && contactForm) {
-      serviceSelect.value = tierValue;
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-      
-      // Fire visual micro-interaction accent on destination form
-      contactForm.classList.add('plan-pulse');
-      setTimeout(() => contactForm.classList.remove('plan-pulse'), 1000);
-    }
-  }
-
-  function validateFileSize(input) {
-    const maxSize = 10 * 1024 * 1024; 
-    const errorSpan = document.getElementById('fileError');
-    const submitBtn = document.getElementById('submitBtn');
-
-    if (input.files && input.files[0]) {
-      if (input.files[0].size > maxSize) {
-        errorSpan.style.display = 'block';
-        submitBtn.disabled = true; 
-        input.value = ''; 
-      } else {
-        errorSpan.style.display = 'none';
-        submitBtn.disabled = false;
-      }
-    }
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-    const form = document.getElementById('contactForm');
-    const btn = document.getElementById('submitBtn');
-    const msgBox = document.getElementById('formMsg');
-    const fileInput = document.getElementById('docUpload');
-    
-    btn.disabled = true; 
-    btn.textContent = 'Streaming Request...';
-    
-    msgBox.className = 'form-msg';
-    msgBox.innerHTML = '';
-    
-    const formData = new FormData(form);
-    
-    try {
-      const res = await fetch(form.action, { 
-        method: 'POST', 
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-      
-      const json = await res.json();
-      
-      if (res.status === 200 && json.success) {
-        form.reset();
-        if(fileInput) fileInput.value = ''; 
-        
-        msgBox.innerHTML = '✓ Architecture inquiry delivered! Our engineering partners will reach out shortly.';
-        msgBox.classList.add('msg-success', 'show');
-        btn.textContent = 'Delivered ✓';
-        setTimeout(() => { msgBox.classList.remove('show'); btn.textContent = 'Send Message'; btn.disabled = false; }, 6000);
-      } else { 
-        console.error("Inbound API Error: ", json);
-        msgBox.innerHTML = `❌ Error: ${json.message || 'Server rejected file stream.'}`;
-        msgBox.classList.add('msg-error', 'show');
-        btn.textContent = 'Send Message'; 
-        btn.disabled = false; 
-      }
-    } catch (error) { 
-      console.error("Pipeline Communication Error: ", error);
-      msgBox.innerHTML = `❌ Network Error: Failed to open connection to the data gateway.`;
-      msgBox.classList.add('msg-error', 'show');
-      btn.textContent = 'Send Message'; 
-      btn.disabled = false; 
-    }
-  }
+function showPage(id, btn){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+function copyText(btn){
+  const text = btn.closest('.script-box').querySelector('.line').innerText;
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent='COPIED ✓';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='COPY';btn.classList.remove('copied')},2000);
+  });
+}
 </script>
 </body>
 </html>
